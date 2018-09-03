@@ -1,0 +1,17 @@
+{
+  "id" : "compranet",
+  "packaging" : "mx.gob.sfp",
+  "version" : "0.0.1",
+  "author" : "kukulkan",
+  "year" : "2018",
+  "targetDatabase" : {
+    "databaseType" : "SQL_MYSQL",
+    "globalGenerationType" : "IDENTITY"
+  },
+  "codeStandard" : "DEFAULT",
+  "layers" : [ "angular-js", "spring-rest", "spring-service", "spring-repository", "domain-core", "liquibase" ],
+  "layersToProcess" : [ ],
+  "entities" : [ ],
+  "timestamp" : "2018-09-03T18:39:55.308",
+  "plugins" : [ ]
+}
