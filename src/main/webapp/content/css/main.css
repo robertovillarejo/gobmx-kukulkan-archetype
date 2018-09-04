@@ -166,6 +166,7 @@ make sure browsers use the pointer cursor for anchors, even with no href
 ========================================================================== */
 a {
     color: #105E90;
+    background-color: transparent;
 }
 
 a:hover, .hand, [jh-sort-by] {
@@ -339,3 +340,6 @@ ui bootstrap tweaks
 }
 
 /* jhipster-needle-css-add-main JHipster will add new css style */
+.breadcrumKukul {
+    padding:  70px 0 0 0;
+}
