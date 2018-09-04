@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>compranet</title>
     <meta name="description" content="">
-    <meta name="google" value="notranslate">
+    <meta name="google" content="notranslate">
     <meta name="theme-color" content="#000000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -24,7 +24,7 @@
     <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
 </head>
 
-<body ng-app="compranetApp" ng-strict-di>
+<body data-ng-app="compranetApp" data-ng-strict-di>
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -32,10 +32,10 @@
     <page-ribbon></page-ribbon>
     <!-- Contenido -->
     <main class="page">
-        <div ui-view="navbar" ng-cloak></div>
+        <div data-ui-view="navbar" data-ng-cloak></div>
         <div class="container">
-            <div ncy-breadcrumb></div>
-            <div ui-view="content"></div>
+            <div data-ncy-breadcrumb></div>
+            <div data-ui-view="content"></div>
             <!-- Angular views -->
         </div>
         <noscript>
@@ -109,7 +109,6 @@
     <script src="app/layouts/navbar/navbar.controller.js"></script>
     <script src="app/layouts/navbar/active-menu.directive.js"></script>
     <script src="app/layouts/error/error.state.js"></script>
-    <script src="app/layouts/breadcrumb/breadcrumb.config.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>
@@ -152,6 +151,7 @@
     <script src="app/blocks/config/localstorage.config.js"></script>
     <script src="app/blocks/config/http.config.js"></script>
     <script src="app/blocks/config/compile.config.js"></script>
+    <script src="app/blocks/config/breadcrumb.config.js"></script>
     <script src="app/blocks/config/alert.config.js"></script>
     <script src="app/app.state.js"></script>
     <script src="app/app.constants.js"></script>
