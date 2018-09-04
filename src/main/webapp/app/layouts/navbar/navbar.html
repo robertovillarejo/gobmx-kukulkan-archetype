@@ -9,10 +9,10 @@
             </button>
             <a class="navbar-brand" ui-sref="home" data-translate="global.title">Compranet</a>
         </div>
-        <div class="collapse navbar-collapse" id="subenlaces">
+        <div class="collapse navbar-collapse" id="subenlaces" ng-switch="vm.isAuthenticated()">
             <ul class="nav navbar-nav navbar-right">
                 <li><a ui-sref="home" data-translate="global.menu.home">Home</a></li>
-                <li class="dropdown">
+                <li ng-class="{active: vm.$state.includes('entity')}" ng-switch-when="true" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-translate="global.menu.entities.main">Entities
                         <span class="caret"></span>
                     </a>
@@ -20,7 +20,7 @@
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                 </li>
-                <li class="dropdown">
+                <li ng-class="{active: vm.$state.includes('admin')}" ng-switch-when="true" has-authority="ROLE_ADMIN" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-translate="global.menu.admin.main">Administration
                         <span class="caret"></span>
                     </a>

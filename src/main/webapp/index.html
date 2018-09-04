@@ -34,11 +34,9 @@
     <main class="page">
         <div ui-view="navbar" ng-cloak></div>
         <div class="container">
+            <div ncy-breadcrumb></div>
             <div ui-view="content"></div>
             <!-- Angular views -->
-            <div class="footer" ng-cloak>
-                <p data-translate="footer">This is your footer</p>
-            </div>
         </div>
         <noscript>
             <h1>You must enable javascript to view this page.</h1>
@@ -87,6 +85,7 @@
     <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 
@@ -110,6 +109,7 @@
     <script src="app/layouts/navbar/navbar.controller.js"></script>
     <script src="app/layouts/navbar/active-menu.directive.js"></script>
     <script src="app/layouts/error/error.state.js"></script>
+    <script src="app/layouts/breadcrumb/breadcrumb.config.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>

@@ -15,7 +15,8 @@
             'ui.bootstrap.datetimepicker',
             'ui.router',
             'infinite-scroll',
-            'angular-loading-bar'
+            'angular-loading-bar',
+            'ncy-angular-breadcrumb'
             // jhipster-needle-angularjs-add-module JHipster will add new module here
         ])
         .run(run);
