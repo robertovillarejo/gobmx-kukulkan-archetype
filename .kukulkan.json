@@ -10,8 +10,8 @@
   },
   "codeStandard" : "DEFAULT",
   "layers" : [ "angular-js", "spring-rest", "spring-service", "spring-repository", "domain-core", "liquibase" ],
-  "layersToProcess" : [ ],
-  "entities" : [ ],
+  "layersToProcess" : [ "angular-js", "spring-rest", "spring-service", "spring-repository", "domain-core", "liquibase" ],
+  "entities" : [ "compranet/src/main/java/mx/gob/sfp/repository/PersonaRepository.java", "compranet/src/main/java/mx/gob/sfp/domain/Persona.java", "compranet/src/main/resources/config/liquibase/changelog/20180903183956_added_entity_Persona.xml", "compranet/src/main/webapp/app/entities/persona/persona.controller.js", "compranet/src/main/webapp/app/entities/persona/personas.html", "compranet/src/main/webapp/app/entities/persona/persona.search.service.js", "compranet/src/main/webapp/app/entities/persona/persona.service.js", "compranet/src/main/webapp/app/entities/persona/persona.state.js", "compranet/src/main/webapp/i18n/es/persona.json", "compranet/src/main/webapp/i18n/en/persona.json", "compranet/src/main/webapp/app/entities/persona/persona-delete-dialog.controller.js", "compranet/src/main/webapp/app/entities/persona/persona-delete-dialog.html", "compranet/src/main/webapp/app/entities/persona/persona-detail.controller.js", "compranet/src/main/webapp/app/entities/persona/persona-detail.html", "compranet/src/main/webapp/app/entities/persona/persona-dialog.controller.js", "compranet/src/main/webapp/app/entities/persona/persona-dialog.html", "compranet/src/main/java/mx/gob/sfp/web/rest/PersonaResource.java", "compranet/src/main/java/mx/gob/sfp/service/PersonaService.java", "compranet/src/main/java/mx/gob/sfp/service/impl/PersonaServiceImpl.java" ],
   "timestamp" : "2018-09-03T18:39:55.308",
   "plugins" : [ ]
 }

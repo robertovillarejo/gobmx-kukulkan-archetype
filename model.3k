@@ -1,0 +1,9 @@
+entity Persona (usuarios) {
+	nombre : String required min(3) max(50),
+	edad : Integer min(5) max(120) required,
+	sueldo : Long,
+	impuesto : Float,
+	activo : Boolean,
+	fechaCreacion : LocalDate,
+	foto : ImageBlob
+}
