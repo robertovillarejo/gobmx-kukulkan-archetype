@@ -5,37 +5,39 @@
         .module('compranetApp')
         .controller('NavbarController', NavbarController);
 
-    NavbarController.$inject = ['$state', 'Principal', 'ProfileService'];
+    NavbarController.$inject = ['$scope', '$state', 'Principal', 'ProfileService', 'LoginService', 'Auth'];
 
-    function NavbarController($state, Principal, ProfileService) {
+    function NavbarController($scope, $state, Principal, ProfileService, LoginService, Auth) {
         var vm = this;
 
-        vm.isNavbarCollapsed = true;
         vm.isAuthenticated = Principal.isAuthenticated;
+        vm.$state = $state;
+        vm.account = null;
+        vm.isAuthenticated = null;
+        vm.login = LoginService.open;
+        vm.logout = logout;
 
         ProfileService.getProfileInfo().then(function (response) {
             vm.inProduction = response.inProduction;
             vm.swaggerEnabled = response.swaggerEnabled;
         });
 
-        vm.toggleNavbar = toggleNavbar;
-        vm.collapseNavbar = collapseNavbar;
-        vm.$state = $state;
+        $scope.$on('authenticationSuccess', function () {
+            getAccount();
+        });
 
-        var pageWrapper = angular.element("#page-wrapper");
+        getAccount();
 
-        function collapseNavbar() {
-            pageWrapper.removeClass('open');
-            vm.isNavbarCollapsed = true;
+        function getAccount() {
+            Principal.identity().then(function (account) {
+                vm.account = account;
+                vm.isAuthenticated = Principal.isAuthenticated;
+            });
         }
 
-        function toggleNavbar() {
-            if (vm.isNavbarCollapsed) {
-                pageWrapper.addClass('open');
-                vm.isNavbarCollapsed = false;
-            } else {
-                collapseNavbar();
-            }
-        };
+        function logout() {
+            Auth.logout();
+            $state.go('home');
+        }
     }
 })();
