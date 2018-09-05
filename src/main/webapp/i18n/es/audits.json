@@ -3,8 +3,8 @@
         "title": "Auditorías",
         "filter": {
             "title": "Filtrar por fecha",
-            "from": "desde",
-            "to": "hasta",
+            "from": "Desde",
+            "to": "Hasta",
             "button": {
                 "weeks": "Semanas",
                 "today": "hoy",

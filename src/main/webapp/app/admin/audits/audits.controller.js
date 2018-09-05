@@ -26,12 +26,28 @@
         vm.onChangeDate();
 
         function onChangeDate () {
+            $('#fromDate').datepicker({
+                 format: "YY-MM-dd",
+                 changeYear: true,
+                 onClose: function (selectedDate) {
+                     $("#toDate").datepicker("option", "minDate", selectedDate);
+                 },
+                 orientation: "top"
+            });
+            $('#toDate').datepicker({
+                  format: "YY-MM-dd",
+                  changeYear: true,
+                  onClose: function (selectedDate) {
+                      $("#fromDate").datepicker("option", "maxDate", selectedDate);
+                  },
+                  orientation: "top"
+            });
             var dateFormat = 'yyyy-MM-dd';
             var fromDate = $filter('date')(vm.fromDate, dateFormat);
             var toDate = $filter('date')(vm.toDate, dateFormat);
 
             AuditsService.query({page: vm.page -1, size: 20, fromDate: fromDate, toDate: toDate}, function(result, headers){
-                vm.audits = result;
+               vm.audits = result;
                 vm.links = ParseLinks.parse(headers('link'));
                 vm.totalItems = headers('X-Total-Count');
             });

@@ -322,6 +322,7 @@ ui bootstrap tweaks
     cursor: pointer;
 }
 
+
 .datetime-picker-dropdown > li.date-picker-menu div > table .btn-default,
 .uib-datepicker-popup  > li > div.uib-datepicker > table .btn-default {
     border: 0;
@@ -335,4 +336,7 @@ ui bootstrap tweaks
 /* jhipster-needle-css-add-main JHipster will add new css style */
 .breadcrumKukul {
     padding:  70px 0 0 0;
+}
+.pagination>li>a, .pagination>li>span{
+    position: inherit;
 }
