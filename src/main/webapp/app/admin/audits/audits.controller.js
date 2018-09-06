@@ -27,7 +27,7 @@
 
         function onChangeDate () {
             $('#fromDate').datepicker({
-                 format: "YY-MM-dd",
+                 dateFormat: "yy-MM-dd",
                  changeYear: true,
                  onClose: function (selectedDate) {
                      $("#toDate").datepicker("option", "minDate", selectedDate);
@@ -35,7 +35,7 @@
                  orientation: "top"
             });
             $('#toDate').datepicker({
-                  format: "YY-MM-dd",
+                  dateFormat: "yy-MM-dd",
                   changeYear: true,
                   onClose: function (selectedDate) {
                       $("#fromDate").datepicker("option", "maxDate", selectedDate);

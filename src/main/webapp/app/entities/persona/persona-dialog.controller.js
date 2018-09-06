@@ -12,15 +12,24 @@
 
         vm.persona = entity;
         vm.clear = clear;
-        vm.datePickerOpenStatus = {};
-        vm.openCalendar = openCalendar;
         vm.byteSize = DataUtils.byteSize;
         vm.openFile = DataUtils.openFile;
         vm.save = save;
-        vm.datePickerOpenStatus.fechaCreacion = false;
+        vm.onChangeDate = onChangeDate;
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
         });
+
+        vm.persona.fechaCreacion = new Date(new Date).toISOString().split("T")[0];
+        vm.onChangeDate();
+
+        function onChangeDate () {
+            $('#fechaCreacion').datepicker({
+                 dateFormat: "yy-mm-dd",
+                 changeYear: true
+             }).datepicker("show");
+         }
+
 
         function clear () {
             $uibModalInstance.dismiss('cancel');
@@ -59,8 +68,5 @@
             }
         };
 
-        function openCalendar (date) {
-            vm.datePickerOpenStatus[date] = true;
-        }
     }
 })();

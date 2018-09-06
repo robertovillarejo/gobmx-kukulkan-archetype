@@ -16,7 +16,7 @@
             <label class="control-label" data-translate="compranetApp.persona.nombre" for="field_nombre">Nombre</label>
             <input type="text" class="form-control" name="nombre" id="field_nombre"
                 ng-model="vm.persona.nombre"
-                required ng-minlength="3" ng-maxlength="50" 
+                required ng-minlength="3" ng-maxlength="50"
                 />
             <div ng-show="editForm.nombre.$invalid">
                 <p class="help-block"
@@ -31,7 +31,7 @@
                     ng-show="editForm.nombre.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
 	                This field cannot be longer than 50 characters.
                 </p>
-            </div>	
+            </div>
         </div>
 			<div class="form-group">
 				<label class="control-label" data-translate="compranetApp.persona.edad"
@@ -57,35 +57,35 @@
 	                    ng-show="editForm.edad.$error.number" data-translate="entity.validation.number">
 	                    This field should be a number.
 	                </p>
-            	</div>	
+            	</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" data-translate="compranetApp.persona.sueldo"
 					for="field_sueldo">sueldo</label>
 				<input type="number" class="form-control" name="sueldo" id="field_sueldo"
 					ng-model="vm.persona.sueldo"
-  
+
 					/>
 				<div ng-show="editForm.sueldo.$invalid">
 	                <p class="help-block"
 	                    ng-show="editForm.sueldo.$error.number" data-translate="entity.validation.number">
 	                    This field should be a number.
 	                </p>
-            	</div>	
+            	</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" data-translate="compranetApp.persona.impuesto"
 					for="field_impuesto">impuesto</label>
 				<input type="number" class="form-control" name="impuesto" id="field_impuesto"
 					ng-model="vm.persona.impuesto"
-  
+
 					/>
 				<div ng-show="editForm.impuesto.$invalid">
 	                <p class="help-block"
 	                    ng-show="editForm.impuesto.$error.number" data-translate="entity.validation.number">
 	                    This field should be a number.
 	                </p>
-            	</div>	
+            	</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" data-translate="compranetApp.persona.activo"
@@ -94,19 +94,12 @@
 					ng-model="vm.persona.activo" />
 			</div>
 			<div class="form-group">
-				<label class="control-label" data-translate="compranetApp.persona.fechaCreacion"
-					for="field_fechaCreacion">fechaCreacion</label>
-				<div class="input-group">
-					<input id="field_fechaCreacion" type="text" class="form-control"
-						name="fechaCreacion" uib-datepicker-popup="{{dateformat}}" ng-model="vm.persona.fechaCreacion"
-						is-open="vm.datePickerOpenStatus.fechaCreacion" 
- />
-					<span class="input-group-btn">
-						<button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaCreacion')">
-							<i class="glyphicon glyphicon-calendar"></i>
-						</button>
-					</span>
-				</div>
+                <div class="form-group datepicker-group">
+                    <label class="control-label" for="fechaCreacion" data-translate="compranetApp.persona.fechaCreacion">fechaCreacion:</label>
+                    <input id="fechaCreacion" class="form-control" placeholder="aaaa-mm-dd" maxlength="10"
+                           name="start" ng-model="vm.persona.fechaCreacion" ng-change="vm.onChangeDate()" ng-click="vm.onChangeDate()" required>
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                </div>
 			</div>
 			<div class="form-group" ngf-drop ngf-change="vm.setFoto($file, vm.persona)">
 				<label class="control-label" data-translate="compranetApp.persona.foto"
