@@ -355,3 +355,8 @@ hr.black:before {
 .main-footer {
     margin-top: 20px;
 }
+
+li.submenuLine{
+    border-left: solid 1px #666;
+    margin-top: 10px;
+}
