@@ -7,7 +7,7 @@
         <dt><span data-translate="global.field.id">id</span></dt>
         <dd>
             <span>{{vm.persona.id}}</span>
-        <dd>
+        </dd>
         <dt><span data-translate="compranetApp.persona.nombre">Nombre</span></dt>
         <dd>
             <span>{{vm.persona.nombre}}</span>
@@ -29,11 +29,11 @@
             <span>{{vm.persona.activo}}</span>
         </dd>
         <dt><span data-translate="compranetApp.persona.fechaCreacion">FechaCreacion</span></dt>
-        <dd>  
+        <dd>
 			<span>{{vm.persona.fechaCreacion | date:'mediumDate'}}</span>
 		</dd>
         <dt><span data-translate="compranetApp.persona.foto">Foto</span></dt>
-        <dd>      
+        <dd>
             <div ng-if="vm.persona.foto">
                 <a ng-click="vm.openFile(vm.persona.fotoContentType, vm.persona.foto)" data-translate="entity.action.open">open</a>
                 {{vm.persona.fotoContentType}}, {{vm.byteSize(vm.persona.foto)}}
