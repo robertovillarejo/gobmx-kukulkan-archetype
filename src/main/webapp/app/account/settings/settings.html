@@ -1,9 +1,8 @@
 <div class="container-fluid">
-    <div class="well">
-
         <h2 data-translate="settings.title" translate-values="{username: '{{vm.settingsAccount.login}}'}">User settings for
             [<b>{{vm.settingsAccount.login}}</b>]</h2>
 
+        <hr class="black"/>
         <div class="alert alert-success" ng-show="vm.success" data-translate="settings.messages.success">
             <strong>Settings saved!</strong>
         </div>
@@ -71,6 +70,4 @@
 
             <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" data-translate="settings.form.button">Save</button>
         </form>
-
-    </div>
 </div>

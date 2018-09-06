@@ -16,13 +16,13 @@
             "detail": {
                 "title": "Persona"
             },
-            "nombre": "Nombre", 
-            "edad": "Edad", 
-            "sueldo": "Sueldo", 
-            "impuesto": "Impuesto", 
-            "activo": "Activo", 
-            "fechaCreacion": "FechaCreacion", 
-            "foto": "Foto", 
+            "nombre": "Name",
+            "edad": "Age",
+            "sueldo": "Salary",
+            "impuesto": "Tag",
+            "activo": "Active",
+            "fechaCreacion": "Creation Date",
+            "foto": "Photo",
             "fotoContentType": "FotoContentType"
         }
     }

@@ -340,3 +340,18 @@ ui bootstrap tweaks
 .pagination>li>a, .pagination>li>span{
     position: inherit;
 }
+hr.black {
+    overflow: initial !important;
+}
+hr.black:before {
+    content: " ";
+}
+hr.black:before {
+    width: 35px !important;
+    height: 5px !important;
+    background-color: #272829 !important;
+    position: absolute !important;
+}
+.main-footer {
+    margin-top: 20px;
+}
