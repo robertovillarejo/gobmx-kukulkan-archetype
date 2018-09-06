@@ -106,7 +106,7 @@
                 url: '/{login}',
                 data: {
                     authorities: ['ROLE_ADMIN'],
-                    pageTitle: 'user-management.detail.title'
+                    pageTitle: 'userManagement.detail.title'
                 },
                 views: {
                     'content@': {
