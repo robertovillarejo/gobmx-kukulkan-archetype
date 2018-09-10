@@ -26,6 +26,7 @@
                 templateUrl: 'app/components/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'vm',
+                size: 'lg',
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('login');

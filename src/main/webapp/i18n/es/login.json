@@ -4,7 +4,7 @@
         "form": {
             "password": "Contraseña",
             "password.placeholder": "Su contraseña",
-            "rememberme": "Iniciar la sesión automáticamente",
+            "rememberme": "Recordarme",
             "button": "Iniciar sesión"
         },
         "messages": {
@@ -13,7 +13,7 @@
             }
         },
         "password" : {
-            "forgot": "¿Ha olvidado su contraseña?"
+            "forgot": "Olvidé mi contraseña"
         }
     }
 }

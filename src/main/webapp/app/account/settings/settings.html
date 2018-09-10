@@ -67,7 +67,8 @@
                 <select id="langKey" name="langKey" class="form-control" ng-model="vm.settingsAccount.langKey" ng-controller="JhiLanguageController as languageVm"
                     ng-options="code as (code | findLanguageFromKey) for code in languageVm.languages"></select>
             </div>
-
-            <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" data-translate="settings.form.button">Save</button>
+            <div class="pull-right">
+                <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary" data-translate="settings.form.button">Save</button>
+            </div>
         </form>
 </div>
