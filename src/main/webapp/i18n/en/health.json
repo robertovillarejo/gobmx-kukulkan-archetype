@@ -22,6 +22,9 @@
         "status": {
             "UP": "UP",
             "DOWN": "DOWN"
+        },
+        "button": {
+            "cancel": "Cancel"
         }
     }
 }

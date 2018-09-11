@@ -22,6 +22,9 @@
         "status": {
             "UP": "LEVANTADO",
             "DOWN": "CAÍDO"
+        },
+        "button": {
+            "cancel": "Cancelar"
         }
     }
 }
