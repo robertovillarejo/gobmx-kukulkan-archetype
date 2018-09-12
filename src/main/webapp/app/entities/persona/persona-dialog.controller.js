@@ -24,7 +24,7 @@
         vm.onChangeDate();
 
         function onChangeDate () {
-            $('#fechaCreacion').datepicker({
+            angular.element('#fechaCreacion').datepicker({
                  dateFormat: "yy-mm-dd",
                  changeYear: true
              }).datepicker("show");
