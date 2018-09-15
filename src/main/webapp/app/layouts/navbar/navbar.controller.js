@@ -5,16 +5,16 @@
         .module('compranetApp')
         .controller('NavbarController', NavbarController);
 
-    NavbarController.$inject = ['$scope', '$state', 'Principal', 'ProfileService', 'LoginService', 'Auth'];
+    NavbarController.$inject = ['$scope', '$state', 'Principal', 'ProfileService', 'Auth'];
 
-    function NavbarController($scope, $state, Principal, ProfileService, LoginService, Auth) {
+    function NavbarController($scope, $state, Principal, ProfileService, Auth) {
         var vm = this;
 
         vm.isAuthenticated = Principal.isAuthenticated;
         vm.$state = $state;
         vm.account = null;
         vm.isAuthenticated = null;
-        vm.login = LoginService.open;
+        vm.login = login;
         vm.logout = logout;
 
         ProfileService.getProfileInfo().then(function (response) {
@@ -38,6 +38,10 @@
         function logout() {
             Auth.logout();
             $state.go('home');
+        }
+
+        function login() {
+            $state.go('login');
         }
     }
 })();

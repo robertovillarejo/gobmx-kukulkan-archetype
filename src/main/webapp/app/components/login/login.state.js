@@ -8,27 +8,27 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state('home', {
+        $stateProvider.state('login', {
             parent: 'app',
-            url: '/',
+            url: '/login',
             data: {
                 authorities: []
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/home/home.html',
-                    controller: 'HomeController',
+                    templateUrl: 'app/components/login/login.html',
+                    controller: 'LoginController',
                     controllerAs: 'vm'
                 }
             },
             onEnter: ['Principal', '$state', function (Principal, $state) {
-                if (!Principal.isAuthenticated) {
-                    $state.go('login');
+                if (Principal.isAuthenticated()) {
+                    $state.go('home');
                 }
             }],
             resolve: {
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                    $translatePartialLoader.addPart('home');
+                    $translatePartialLoader.addPart('login');
                     return $translate.refresh();
                 }]
             }
