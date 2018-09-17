@@ -22,9 +22,10 @@
                 }
             },
             onEnter: ['Principal', '$state', function (Principal, $state) {
-                if (!Principal.isAuthenticated) {
+                /* Descomenta este bloque para redireccionar hacia el login
+                if (!Principal.isAuthenticated()) {
                     $state.go('login');
-                }
+                }*/
             }],
             resolve: {
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
