@@ -26,19 +26,19 @@
         vm.onChangeDate();
 
         function onChangeDate () {
-            $('#fromDate').datepicker({
+            angular.element('#fromDate').datepicker({
                  dateFormat: "yy-MM-dd",
                  changeYear: true,
                  onClose: function (selectedDate) {
-                     $("#toDate").datepicker("option", "minDate", selectedDate);
+                     angular.element("#toDate").datepicker("option", "minDate", selectedDate);
                  },
                  orientation: "top"
             });
-            $('#toDate').datepicker({
+            angular.element('#toDate').datepicker({
                   dateFormat: "yy-MM-dd",
                   changeYear: true,
                   onClose: function (selectedDate) {
-                      $("#fromDate").datepicker("option", "maxDate", selectedDate);
+                      angular.element("#fromDate").datepicker("option", "maxDate", selectedDate);
                   },
                   orientation: "top"
             });

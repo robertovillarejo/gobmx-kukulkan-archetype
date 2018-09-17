@@ -157,11 +157,6 @@ Generic styles
 /* ==========================================================================
 make sure browsers use the pointer cursor for anchors, even with no href
 ========================================================================== */
-a {
-    color: #105E90;
-    background-color: transparent;
-}
-
 a:hover, .hand, [jh-sort-by] {
     cursor: pointer;
 }
