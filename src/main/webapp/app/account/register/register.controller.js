@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -6,22 +6,22 @@
         .controller('RegisterController', RegisterController);
 
 
-    RegisterController.$inject = ['$translate', '$timeout', 'Auth', 'LoginService', 'errorConstants'];
+    RegisterController.$inject = ['$state', '$translate', '$timeout', 'Auth', 'errorConstants'];
 
-    function RegisterController ($translate, $timeout, Auth, LoginService, errorConstants) {
+    function RegisterController($state, $translate, $timeout, Auth, errorConstants) {
         var vm = this;
 
         vm.doNotMatch = null;
         vm.error = null;
         vm.errorUserExists = null;
-        vm.login = LoginService.open;
+        vm.login = login;
         vm.register = register;
         vm.registerAccount = {};
         vm.success = null;
 
-        $timeout(function (){angular.element('#login').focus();});
+        $timeout(function () { angular.element('#login').focus(); });
 
-        function register () {
+        function register() {
             if (vm.registerAccount.password !== vm.confirmPassword) {
                 vm.doNotMatch = 'ERROR';
             } else {
@@ -44,6 +44,9 @@
                     }
                 });
             }
+        }
+        function login() {
+            $state.go('login');
         }
     }
 })();
