@@ -77,7 +77,7 @@ liquibase:
 #        key-alias: compranet
 # ===================================================================
 server:
-    port: 3002
+    port: 8080
 
 jhipster:
     http:
